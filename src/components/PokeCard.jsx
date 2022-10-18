@@ -15,7 +15,7 @@ function PokeCard({ name, sprites, types, id }) {
             style={{ width: 200, height: 200 }}
           />
         </Link>
-        <div className='mb-2 font-arcade text-center w-full'>{name}</div>
+        <div className='mb-2 text-center w-full'>{name}</div>
         <div className='flex justify-evenly'>
           {types.map((element) => {
             return <Type key={element.slot} element={element.type} />;

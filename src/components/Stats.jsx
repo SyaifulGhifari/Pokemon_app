@@ -1,8 +1,6 @@
 import React from 'react';
 
 function Stats({ name, stat }) {
-  console.log(name);
-  // console.log(stat);
   return (
     <div>
       <div>
@@ -10,7 +8,7 @@ function Stats({ name, stat }) {
         <div className='w-full h-2 bg-white'>
           <div
             className='h-full bg-blue-800'
-            style={{ width: `${stat}%` }}
+            style={{ width: `${stat}%`, maxWidth: '100%' }}
           ></div>
         </div>
         {stat}

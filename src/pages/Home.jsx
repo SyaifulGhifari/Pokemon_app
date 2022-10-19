@@ -23,20 +23,26 @@ function Home() {
           return detail_pokemon.data;
         })
       );
-      console.log(res_details);
       SetDetails(res_details);
     } catch (error) {
-      console.log(error);
+      alert(error.toStirng());
     }
   };
-
   return (
     <div className='bg-sky-400'>
+      <Navbar />
       <div className='w-2/3 mx-auto'>
-        <Navbar />
         <div className='grid px-10 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {details.map((pokemon) => {
-            return <PokeCard key={pokemon.id} {...pokemon} />;
+            return (
+              <PokeCard
+                key={pokemon.id}
+                name={pokemon.name}
+                img={pokemon.sprites}
+                id={pokemon.id}
+                types={pokemon.types}
+              />
+            );
           })}
         </div>
       </div>

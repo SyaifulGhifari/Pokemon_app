@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
 import Stats from '../components/Stats';
 import Type from '../components/Type';
+import { GrCaretPrevious } from 'react-icons/gr';
 
 function DetailPokemon() {
   const params = useParams();
   const { id } = params;
   const [pokemon, setPokemon] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchdata();
@@ -31,10 +33,19 @@ function DetailPokemon() {
 
   const skills = skill(pokemon?.moves);
 
+  const handleClickBack = () => {
+    navigate('/');
+  };
+
   return (
     <div className='bg-sky-400 h-screen'>
       <div className='w-2/3 mx-auto'>
         <Navbar />
+        <GrCaretPrevious
+          size='3rem'
+          onClick={handleClickBack}
+          className={`fixed top-1/2 left-20 cursor-pointer`}
+        />
         <div className='grid grid-cols-2 gap-4'>
           <div className='bg-slate-400 h-96 border-2 border-white px-6'>
             <img

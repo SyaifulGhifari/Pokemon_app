@@ -18,15 +18,15 @@ function Navbar() {
 
   return (
     <div
-      className={`mb-4 z-30 h-20 w-full sticky flex items-center top-0 ${
-        color ? 'backdrop-blur-md' : ''
+      className={`mb-4 z-30 h-20 w-full sticky flex items-center  top-0 ${
+        color ? 'justify-start' : 'justify-center'
       }`}
     >
       <img
         onClick={handleNavigate}
         src='/logo.png'
         alt='logo pokemon'
-        className='cursor-pointer mx-auto'
+        className={`cursor-pointer ${color ? 'ml-12' : ''}`}
         style={{ width: 250, height: 100 }}
       />
     </div>

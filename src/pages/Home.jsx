@@ -50,15 +50,14 @@ function Home() {
       setPageBack(true);
     } else setPageBack(false);
   };
-
   return (
-    <div className='bg-sky-400'>
+    <div className='bg-sky-400 '>
       <Navbar />
       {pageBack ? (
         <GrCaretPrevious
           onClick={handleClickPrevious}
           size='3rem'
-          className={`fixed top-1/2 left-20 cursor-pointer`}
+          className={`fixed z-30 top-1/2 left-1 md:left-12 lg:left-20 xl:left-24 cursor-pointer`}
         />
       ) : (
         ''
@@ -67,11 +66,10 @@ function Home() {
       <GrCaretNext
         onClick={handleClickNext}
         size='3rem'
-        color='white'
-        className='fixed top-1/2 right-20 cursor-pointer'
+        className='fixed z-30 top-1/2 right-1 md:right-12 lg:right-20 xl:right-24 cursor-pointer'
       />
-      <div className='w-2/3 mx-auto'>
-        <div className='grid px-10 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+      <div className='w-2/3 lg:w-4/5 mx-auto'>
+        <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {details.map((pokemon) => {
             return (
               <PokeCard

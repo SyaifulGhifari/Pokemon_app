@@ -47,11 +47,11 @@ function DetailPokemon() {
           className={`fixed top-1/2 left-20 cursor-pointer`}
         />
         <div className='grid grid-cols-2 gap-4'>
-          <div className='bg-slate-400 h-96 border-2 border-white px-6'>
+          <div className='bg-yellow-500 h-96 border-4 border-blue-600 px-6'>
             <img
               src={pokemon?.sprites?.front_default}
               alt='pokemon'
-              className='bg-none mx-auto'
+              className='mx-auto'
               style={{ width: 230, height: 230 }}
             />
             <div className='mb-2 text-center w-full'>{pokemon?.name}</div>
@@ -61,14 +61,14 @@ function DetailPokemon() {
               })}
             </div>
           </div>
-          <div className='bg-slate-400 h-96 border-2 border-white p-6'>
+          <div className='bg-yellow-500 h-96 border-4 border-blue-600 p-6'>
             {pokemon?.stats?.map((att, idx) => {
               return (
                 <Stats key={idx} name={att.stat.name} stat={att.base_stat} />
               );
             })}
           </div>
-          <div className='bg-slate-400 h-96 border-2 border-white p-6'>
+          <div className='bg-yellow-500 h-96 border-4 border-blue-600 p-6'>
             <div className='text-center py-3'>Detail</div>
             <div className='mb-1'>Name : {pokemon?.name} </div>
             <div className='mb-1'>
@@ -90,7 +90,7 @@ function DetailPokemon() {
                 .join(', ')}
             </div>
           </div>
-          <div className='bg-slate-400 h-96 border-2 border-white p-6'>
+          <div className='bg-yellow-500 h-96 border-4 border-blue-600 p-6'>
             <div className='text-center py-3'>Skill</div>
             <div className='grid grid-cols-2 gap-2 ml-10 '>
               {skills?.map((moves, idx) => {

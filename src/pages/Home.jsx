@@ -68,7 +68,7 @@ function Home() {
         size='3rem'
         className='fixed z-30 top-1/2 right-1 md:right-12 lg:right-20 xl:right-24 cursor-pointer'
       />
-      <div className='w-2/3 lg:w-4/5 mx-auto'>
+      <div className='w-2/3 mx-auto'>
         <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {details.map((pokemon) => {
             return (

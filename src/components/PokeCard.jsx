@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function PokeCard({ name, img, types, id }) {
   return (
     <div className='flex '>
-      <div className='border-8 w-64 p-2 justify-center border-blue-700 mx-auto bg-orange-300 relative text-black mx-4 my-8 lg:my-6 lg:mx-5'>
+      <div className='border-8 w-64 p-2 justify-center border-blue-700 mx-auto bg-orange-300 relative text-black my-8 lg:my-6 lg:mx-5'>
         <Link to={`/detail/${id}`}>
           <img
             src={img.front_default}

@@ -16,8 +16,6 @@ function Navbar() {
   };
   window.addEventListener('scroll', changeColor);
 
-  console.log(window.scrollY);
-
   return (
     <div
       className={`mb-4 z-30 h-20 w-full lg:sticky transition-all duration-200 flex items-center top-0 ${
